@@ -3,12 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RepresentativeComponent } from './representative/representative.component';
+import { NewsComponent } from './news/news.component';
+import { AboutChurchComponent } from './about-church/about-church.component';
 
 
 const routes: Routes = [
-  {component: LoginComponent, path: 'login'},
-  {component: WelcomeComponent, path: 'welcome'},
-  {component: RepresentativeComponent, path: 'representative'}
+
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'welcome', component: WelcomeComponent },
+  { path: 'representative', component: RepresentativeComponent },
+  { path: 'aboutChurch', component: AboutChurchComponent },
+  { path: 'news', component: NewsComponent },
+  { path: '**', redirectTo: 'welcome' }
 
 ];
 

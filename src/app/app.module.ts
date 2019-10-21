@@ -6,17 +6,27 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RepresentativeComponent } from './representative/representative.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { HeaderComponent } from './header/header.component';
+import { AboutChurchComponent } from './about-church/about-church.component';
+import { ContactComponent } from './contact/contact.component';
+import { NewsComponent } from './news/news.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RepresentativeComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HeaderComponent,
+    AboutChurchComponent,
+    ContactComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
