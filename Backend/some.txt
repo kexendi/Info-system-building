@@ -1,1 +1,1 @@
-valami.
+A backendi logika megvalósítása eme csodás projectben az Infó Rendszerek Építése tárgyhoz 2019 őszi félévében Kácsándi kolléga által.
