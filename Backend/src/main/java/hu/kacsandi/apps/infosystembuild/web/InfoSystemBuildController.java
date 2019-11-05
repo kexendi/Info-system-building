@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class InfoSystemBuildController {
 
 
+    @Autowired
     private InfoSystemBuildService infoSystemBuildService;
 
     @CrossOrigin(origins = "https://localhost:4200")

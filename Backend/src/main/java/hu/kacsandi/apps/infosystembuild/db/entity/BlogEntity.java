@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
@@ -11,17 +12,21 @@ import java.util.Date;
 public class BlogEntity {
 
     @Id
+    @NotNull
     private Long id;
 
+    @NotNull
     @Column(name = "CREATE_TIME")
     private Date createTime;
 
     @Column(name = "UPDATE_TIME")
     private Date updateTime;
 
+    @NotNull
     @Column(name = "TITLE")
     private String title;
 
+    @NotNull
     @Column(name = "CONTENT")
     private String content;
 
