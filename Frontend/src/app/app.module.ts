@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { RepresentativeComponent } from './representative/representative.component';
+import { RepresentativeComponent } from './tabs/representative/representative.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './header/header.component';
-import { AboutChurchComponent } from './about-church/about-church.component';
-import { ContactComponent } from './contact/contact.component';
-import { NewsComponent } from './news/news.component';
+import { AboutChurchComponent } from './tabs/about-church/about-church.component';
+import { ContactComponent } from './tabs/contact/contact.component';
+import { NewsComponent } from './tabs/news/news.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatCardModule} from '@angular/material/card';

@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { RepresentativeComponent } from './representative/representative.component';
-import { NewsComponent } from './news/news.component';
-import { AboutChurchComponent } from './about-church/about-church.component';
+import { RepresentativeComponent } from './tabs/representative/representative.component';
+import { NewsComponent } from './tabs/news/news.component';
+import { AboutChurchComponent } from './tabs/about-church/about-church.component';
 
 
 const routes: Routes = [
