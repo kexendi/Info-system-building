@@ -13,8 +13,8 @@ Backend:
 - Spring JPA
 
 Database:
--Docker
--Oracle 12
+- Docker
+- Oracle 12
 
 ### Használata
 
