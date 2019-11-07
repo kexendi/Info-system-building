@@ -9,23 +9,24 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin()
-                .and()
-                .logout()
-                .permitAll()
-                .and()
-                .authorizeRequests()
-                .antMatchers("/**")
-                .hasRole("USER");
-    }
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.formLogin()
+//                .and()
+//                .logout()
+//                .permitAll()
+//                .and()
+//                .authorizeRequests()
+//                .antMatchers("/**")
+//                .hasRole("USER");
+//    }
 
 //    @Override
 //    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -40,21 +41,25 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 //        return authenticationProvider;
 //    }
 
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication()
-//                .withUser("kexendi")
-//                .password("password")
-//                .roles("USER")
-//                .and()
-//                .withUser("admin")
-//                .password("admin")
-//                .roles("USER", "ADMIN");
-//    }
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication()
+                .withUser("kexendi")
+                .password("password")
+                .roles("USER")
+                .and()
+                .withUser("admin")
+                .password("admin")
+                .roles("USER", "ADMIN");
+    }
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        return NoOpPasswordEncoder.getInstance();
     }
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
 
 //    @Bean
 //    public ApplicationRunner applicationRunner() {
