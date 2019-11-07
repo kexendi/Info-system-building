@@ -31,4 +31,11 @@ public class InfoSystemBuildController {
         response.setUserEntity(infoSystemBuildService.getUser());
         return  response;
     }
+
+    @GetMapping("/admin")
+    public GetUserResponse admin() {
+        GetUserResponse response = new GetUserResponse();
+        response.setUserEntity(infoSystemBuildService.getAdmin());
+        return  response;
+    }
 }
