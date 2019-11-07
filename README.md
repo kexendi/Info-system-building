@@ -12,18 +12,10 @@ Backend:
 - Spring Security
 - Spring JPA
 
+Database:
+-Docker
+-Oracle 12
+
 ### Használata
 
-A futtatáshoz szükséges [Node.js](https://nodejs.org/) v4+.
-Telepítse a függőségeket és a devDependenciákat, és indítsa el a szervert.
-
-```sh
-$ cd Frontned
-$ npm install
-$ ng serve
-```
-Majd indítsa el a Backendi servert is a biztonság kedvvért, mert anélkül semmi adat nem fog megjelenni... kek :D
-Az url és a hozzá tartozó port melyen elérhető az app:
-```sh
-https://localhost:4200
-```
+Fogod a docker-es imgage-et -ha kész lesz- letöltöd, majd futtatod a containerben, majd Chrome-ban belépsz localhost:4200-on.
