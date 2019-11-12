@@ -25,4 +25,8 @@
         taken." Would you like to try Sample HTML Template?
     </mat-card>
 
+    <div *ngFor="let blog of blogs">
+        {{blog.title}}
+        {{blog.content}}
+    </div>
 </div>
