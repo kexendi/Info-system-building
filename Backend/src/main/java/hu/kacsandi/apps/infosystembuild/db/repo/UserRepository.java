@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
 
-        //    Mesés, csodás SLQ-ek helye
+    //    Mesés, csodás SLQ-ek helye
     @Query("SELECT u FROM UserEntity u WHERE u.roles = 'USER'")
     List<UserEntity> getAllUser(String users);
 
