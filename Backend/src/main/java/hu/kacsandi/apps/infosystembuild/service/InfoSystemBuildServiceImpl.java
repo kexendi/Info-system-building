@@ -22,8 +22,5 @@ public class InfoSystemBuildServiceImpl implements InfoSystemBuildService {
     public List<BlogEntity> getBlogs() {return blogRepository.findAll();}
 
     @Override
-    public List<UserEntity> getUser() { return userRepository.getAllUser("USER");}
-
-    @Override
-    public List<UserEntity> getAdmin() { return userRepository.getAllAdmin("ADMIN");}
+    public List<UserEntity> getUser() { return userRepository.findAll();}
 }

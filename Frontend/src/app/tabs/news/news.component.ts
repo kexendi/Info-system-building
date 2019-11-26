@@ -9,13 +9,15 @@ import { Blogs } from 'src/app/model/blogs';
 })
 export class NewsComponent implements OnInit {
 
-  blogs: Blogs[];
+  blogs: any;
 
   constructor(private mainService: MainService) { }
 
   ngOnInit() {
     this.mainService.getBlogs().subscribe(data => {
-      this.blogs = data;
+      this.blogs = Object.keys(data).map(key => ({entity: key, blogs: data[key]}));
+
+      console.log("miez?: ", this.blogs);
     });
 
   }

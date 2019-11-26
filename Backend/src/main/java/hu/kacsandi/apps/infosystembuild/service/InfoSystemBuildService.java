@@ -9,5 +9,4 @@ public interface InfoSystemBuildService {
 
     List<BlogEntity> getBlogs();
     List<UserEntity> getUser();
-    List<UserEntity> getAdmin();
 }

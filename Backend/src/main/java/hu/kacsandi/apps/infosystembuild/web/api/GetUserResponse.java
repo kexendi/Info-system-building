@@ -12,7 +12,5 @@ public class GetUserResponse {
         return userEntity;
     }
 
-    public void setUserEntity(List<UserEntity> userEntity) {
-        this.userEntity = userEntity;
-    }
+    public void setUserEntity(List<UserEntity> userEntity) { this.userEntity = userEntity;}
 }
