@@ -5,6 +5,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { RepresentativeComponent } from './tabs/representative/representative.component';
 import { NewsComponent } from './tabs/news/news.component';
 import { AboutChurchComponent } from './tabs/about-church/about-church.component';
+import { ContactComponent } from './tabs/contact/contact.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'representative', component: RepresentativeComponent },
   { path: 'aboutChurch', component: AboutChurchComponent },
   { path: 'news', component: NewsComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: 'welcome' }
 
 ];
