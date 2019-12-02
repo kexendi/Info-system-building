@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from 'src/app/service/main.service';
-import { Blogs } from 'src/app/model/blogs';
+import { Blog } from 'src/app/model/blog';
 
 @Component({
   selector: 'app-news',
@@ -9,13 +9,13 @@ import { Blogs } from 'src/app/model/blogs';
 })
 export class NewsComponent implements OnInit {
 
-  blogs: any;
+  blogs: Blog[];
 
   constructor(private mainService: MainService) { }
 
   ngOnInit() {
     this.mainService.getBlogs().subscribe(data => {
-      this.blogs = Object.keys(data).map(key => ({entity: key, blogs: data[key]}));
+      this.blogs = data;
 
       console.log("miez?: ", this.blogs);
     });

@@ -1,4 +1,4 @@
-export class Blogs {
+export class Blog {
 
     id: number;
     createTime: Date;

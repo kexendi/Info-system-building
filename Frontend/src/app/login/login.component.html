@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" [formGroup]="loginForm">
+            <input 
+                type="text"
+                placeholder="Felhasználónév"
+                class="form-control"
+                formControlName="username" />
+            <div *ngIf="loginForm.controls.username.errors" class="invalid-feedback">
+                <div *ngIf="loginForm.controls.username.errors.required">Felhasználónév szükséges!</div>
+            </div>
+
+            <input 
+                type="password" 
+                placeholder="Jelszó" 
+                class="form-control"
+                formControlName="password" />
+            <div *ngIf="loginForm.controls.password.errors" class="invalid-feedback">
+                <div *ngIf="loginForm.controls.password.errors.required">Jelszó szükséges!</div>
+            </div>
+
+            <button (click)= "authorize(event)">Belépés</button>
+            <p *ngIf="true" class="message">Nem regisztráltál még? <a href="login/create">új fiók létrehozása</a></p>
+        </form>
+    </div>
+</div>
